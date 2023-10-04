@@ -32,7 +32,7 @@ def fixed_links(base: str, links: list[str]):
     for link in links:
         if validators.url(link):
             links_fixed.append(link)
-        elif link in ['#', '', ' ']:
+        elif link in ['#', '', ' ', '/']:
             continue
         elif link is None:
             continue
